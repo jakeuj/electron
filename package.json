@@ -1,0 +1,30 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Your application description",
+  "author": {
+    "name": "jakeuj",
+    "email": "jakeuj@hotmail.com"
+  },
+  "homepage": "https://jakeuj.com",
+  "devDependencies": {
+    "electron": "^31.0.2",
+    "electron-builder": "^24.13.3"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.jakeuj.my-electron-app",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "maintainer": "Jake <jakeuj@hotmail.com>"
+    }
+  }
+}
