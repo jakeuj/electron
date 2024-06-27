@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron App</title>
+  <style>
+    #output {
+      height: 300px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Script Runner</h1>
+  <button id="run-script-1">Run Script 1</button>
+  <button id="run-script-2">Run Script 2</button>
+  <button id="run-script-3">Run Script 3</button>
+  <pre id="output"></pre>
+  <script src="renderer.js"></script>
+</body>
 </html>

@@ -1,7 +1,7 @@
 {
   "name": "my-electron-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "license": "MIT",
   "description": "Your application description",
   "author": {
@@ -18,7 +18,20 @@
     "build": "electron-builder"
   },
   "build": {
+	"asar": true,
     "appId": "com.jakeuj.my-electron-app",
+	"files": [
+      "main.js",
+      "index.html",
+      "renderer.js"
+    ],
+    "extraFiles": [
+      {
+        "from": "scripts/",
+        "to": "resources/scripts/",
+        "filter": ["**/*"]
+      }
+    ],
     "linux": {
       "target": [
         "deb"
